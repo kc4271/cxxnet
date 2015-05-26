@@ -32,3 +32,5 @@ rabit
 *.user
 *.lib
 *.dll
+*.ilk
+*.idb
