@@ -127,6 +127,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>false</SDLCheck>
       <AdditionalOptions>/DMSHADOW_USE_CBLAS=1 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:\Program Files (x86)\Intel\Composer XE 2013\mkl\include;$(SolutionDir)..\..\..\dmlc-core\include;D:\Lib\opencv2411\build\include;%(AdditionalIncludeDirectories);$(CudaToolkitIncludeDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

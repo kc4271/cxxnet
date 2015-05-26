@@ -132,19 +132,21 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>false</SDLCheck>
-      <AdditionalOptions>/DMSHADOW_USE_CBLAS=1 /DMSHADOW_USE_MKL=0 /DCXXNET_USE_OPENCV=1 /DCXXNET_USE_CUDNN=0 /DCXXNET_USE_OPENCV_DECODER=1 /DMSHADOW_DIST_PS=0 /D__WIN__=1 /D_USE_MATH_DEFINES %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <OpenMPSupport>true</OpenMPSupport>
       <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <AdditionalIncludeDirectories>D:\Program Files (x86)\Intel\Composer XE 2013\mkl\include;$(SolutionDir)..\..\..\dmlc-core\include;D:\Lib\opencv2411\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MSHADOW_USE_CBLAS=0;MSHADOW_USE_MKL=1;CXXNET_USE_OPENCV=1;CXXNET_USE_CUDNN=0;DMLC_USE_CXX11=1;CXXNET_USE_OPENCV_DECODER=1;MSHADOW_DIST_PS=0;__WIN__=1;_USE_MATH_DEFINES;MSHADOW_RABIT_PS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>opencv_core2410.lib;opencv_imgproc2410.lib;opencv_highgui2410.lib;libopenblas.dll.a;cublas.lib;curand.lib;cudart.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opencv_core2411.lib;opencv_imgproc2411.lib;opencv_highgui2411.lib;curand.lib;cudart.lib;cublas.lib;dmlc.lib;mkl_core.lib;mkl_rt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Lib\opencv2411\build\x64\vc12\lib;D:\Program Files (x86)\Intel\Composer XE 2013\mkl\lib\intel64;$(SolutionDir)..\..\..\dmlc-core\windows\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <CudaCompile>
       <AdditionalOptions>-DMSHADOW_USE_CBLAS=1 -DMSHADOW_USE_MKL=0 -DCXXNET_USE_OPENCV=1 -DCXXNET_USE_CUDNN=0 -DCXXNET_USE_OPENCV_DECODER=1 -DMSHADOW_DIST_PS=0 %(AdditionalOptions)</AdditionalOptions>

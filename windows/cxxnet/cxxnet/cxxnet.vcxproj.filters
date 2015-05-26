@@ -300,6 +300,9 @@
     <ClInclude Include="..\..\..\mshadow\mshadow-ps\thread_util.h">
       <Filter>mshadow-ps</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\src\io\iter_image_recordio-inl.hpp">
+      <Filter>io</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="nnet">
